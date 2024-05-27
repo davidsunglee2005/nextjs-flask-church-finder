@@ -1,19 +1,22 @@
 // This is the root layout component for your Next.js app.
 // Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
 
-import { Libre_Franklin } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const libre_franklin = Libre_Franklin({
+const inter = Inter({
   subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-libre_franklin',
+  variable: '--font-inter',
 })
 
-export default function Layout({ children }) {
+export default function RootLayout({ 
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body className={libre_franklin.variable}>
+      <body className={inter.variable}>
         {children}
       </body>
     </html>
